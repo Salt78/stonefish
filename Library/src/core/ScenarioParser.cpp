@@ -681,6 +681,7 @@ bool ScenarioParser::ParseEnvironment(XMLElement* element)
                 VelocityField* current = ParseVelocityField(item);
                 if(current != nullptr)
                     ocn->AddVelocityField(current);
+                    ocn->EnableCurrents();
             }
             while((item = item->NextSiblingElement("current")) != nullptr);
         }
